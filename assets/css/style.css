@@ -1,0 +1,44 @@
+
+body {
+	font-family: 'Share Tech Mono', monospace;
+	text-align: center;	
+	font-size: 15px;
+}
+
+
+/*.buttonOne {
+	float: left;
+}
+
+.buttontwo {
+	float: right;
+}*/
+
+.callButton {
+	max-width: 20%;
+}
+
+.chatButton {
+	max-width: 20%;
+}
+
+.buttonOne{
+	margin-bottom: px;
+}
+
+
+.buttonTwo {}
+
+
+
+
+
+
+.clear {
+	clear: both;
+}
+
+
+
+
+

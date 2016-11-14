@@ -1,2 +1,2 @@
-# workCalculator
-Calculator for work lol
+#ReadMe....
+Calculator for work
