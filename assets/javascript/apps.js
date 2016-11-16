@@ -14,8 +14,8 @@ var installTotal = 0;
 var total = 0;
 
 
-// for rph purposes
-var call_Money_Total = 0;
+// Future patch RPH purposes.
+//var call_Money_Total = 0;
 
 
 
@@ -53,7 +53,11 @@ $(".install_Btn").on("click", function(){
 
 
 
-// Future patch
+// Future patch RHP calculator
+
+
+
+
 // $(".rphValue").on("click", function(){
 // 	var hours = prompt("How many hours have you worked");
 
@@ -62,6 +66,18 @@ $(".install_Btn").on("click", function(){
 
 
 
+
+
+
+//future table implmentation
+/*
+table
+for week
+			Mon Tues Wed Thur Fri
+Calls 		 4	  7	  3	   5   6
+Chats 		 6	  4	  2    2   3
+Install 	 8	  2	  1    1   8
+*/
 
 
 
@@ -77,6 +93,9 @@ $(".storeBtn").on("click", function(){
 	localStorage.setItem('chats', chatCount);
 	localStorage.setItem('installs', installCount);
 	return false;
+	$(".restoreCalls").text("Data Stored");
+	$(".restoreChats").text("Data Stored");
+	$(".restoreInstalls").text("Data Stored");
 });
 
 // data stores : ok
@@ -99,10 +118,11 @@ $(".clearBtn").on("click", function(){
 
 
 
+
 function checkTotals() {
-		$(".restoreCalls").text("Previous Count ").append(localStorage.getItem('calls'));
-		$(".restoreChats").text("Previous Count ").append(localStorage.getItem('chats'));
-		$(".restoreInstalls").text("Previous Count ").append(localStorage.getItem('installs'));
+		$(".restoreCalls").text("No saved Data").append(localStorage.getItem('calls'));
+		$(".restoreChats").text("No saved Data").append(localStorage.getItem('chats'));
+		$(".restoreInstalls").text("No saved Data").append(localStorage.getItem('installs'));
 	}
 
 
@@ -113,10 +133,11 @@ checkTotals();
 
 
 
+
+//features to hide and show menus.
+
 $('.totalArea').hide();
 $('.totalArea').hide();
-
-
 
 $(".infoImg").on("click", function(){
 	$('.container').toggle();
