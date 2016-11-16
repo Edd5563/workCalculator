@@ -9,7 +9,7 @@ body {
 
 
 .infoImg{
-	max-width: 30px;
+	
 	position:absolute;
 	left:1px;
 	top:1px;
@@ -24,6 +24,7 @@ body {
 .btn1 {
 	margin: 45px;
 	background-color: gray; 
+	max-width: 
 }
 
 
@@ -33,7 +34,7 @@ body {
 
 
 .call_Btn {
-	padding: 9px 50px;
+	padding: 9px 15px;
 	background-color: orange; 
 	border-style: none;
 	margin: 10px;
@@ -41,7 +42,7 @@ body {
 }
 
 .chat_Btn {
-	padding: 9px 50px;
+	padding: 9px 15px;
 	background-color: coral; 
 	border-style: none;
 	margin: 10px;
@@ -49,7 +50,7 @@ body {
 }
 
 .install_Btn {
-	padding: 9px 70px;
+	padding: 9px 20px;
 	background-color: teal; 
 	border-style: none;
 	margin: 10px;
