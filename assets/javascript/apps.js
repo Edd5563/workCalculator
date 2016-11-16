@@ -117,11 +117,15 @@ $(".storeBtn").on("click", function(){
 $(".clearBtn").on("click", function(){
 	callCount = 0;
 	chatCount = 0;
+	installCount = 0;
 	total = 0;
-	$(".chatCount").text("Data Cleared");
-	$(".callCount").text("Data Cleared");
-	$("#totalCount").text("Data Cleared");
+	$(".callText").text("Data Cleared");
+	$(".chatText").text("Data Cleared");
+	$(".installText").text("Data Cleared");
+	$(".madeToday").text("Data Cleared");
+	$(".totalCount").text("Data Cleared");
 	localStorage.clear();
+	totalEarned = 0;
 });
 
 // Nukes all data: ok
