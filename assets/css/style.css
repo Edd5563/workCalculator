@@ -3,32 +3,62 @@ body {
 	font-family: 'Share Tech Mono', monospace;
 	text-align: center;	
 	font-size: 15px;
+	background-color: lightgray;
 }
 
 
-/*.buttonOne {
-	float: left;
-}
 
-.buttontwo {
-	float: right;
-}*/
-
-.callButton {
-	max-width: 20%;
-}
-
-.chatButton {
-	max-width: 20%;
-}
-
-.buttonOne{
-	margin-bottom: px;
+.infoImg{
+	max-width: 30px;
+	position:absolute;
+	left:1px;
+	top:1px;
 }
 
 
-.buttonTwo {}
+.btn1 {
+	margin: 45px;
+	background-color: gray; 
+}
 
+.btn2 {
+	margin: 45px;
+	background-color: gray;
+}
+
+.btn3 {
+	margin: 45px;
+	background-color: gray;
+}
+
+
+
+
+
+
+.call_Btn {
+	padding: 9px 50px;
+	background-color: orange; 
+	border-style: none;
+	margin: 10px;
+	color: white;
+}
+
+.chat_Btn {
+	padding: 9px 50px;
+	background-color: coral; 
+	border-style: none;
+	margin: 10px;
+	color: white;
+}
+
+.install_Btn {
+	padding: 9px 70px;
+	background-color: teal; 
+	border-style: none;
+	margin: 10px;
+	color: white;
+}
 
 
 

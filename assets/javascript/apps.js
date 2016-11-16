@@ -1,33 +1,76 @@
 // Connected
 $(document).ready(function(){
 var dataCount = 0;
+
 var callCount = 0;
+var callTotal = 0;
+
 var chatCount = 0;
+var chatTotal = 0;
+
+var installCount = 0;
+var installTotal = 0;
+
 var total = 0;
 
-$(".callButton").on("click", function(){
+
+// for rph purposes
+var call_Money_Total = 0;
+
+
+
+
+function rph(callCount, chatCount, installCount, hours) {
+var num = ((callCount + chatCount)* (8.36) / hours) + ((installCount * 13.83) / hours);
+	$('.totalCount').text(rph());
+}
+
+
+
+
+$(".call_Btn").on("click", function(){
 	callCount = callCount + 1;
-	$("#callCount").text("Total calls are " + callCount);
-	var total = callCount + chatCount;
-	$("#totalCount").text("Total count " + total);
+	$(".callText").text("Calls: " + callCount);
+	var total = callCount + chatCount + installCount;
+	$(".totalCount").text("Total count " + total);
 });
 
 
-
-
-$(".chatButton").on("click", function(){
+$(".chat_Btn").on("click", function(){
 	chatCount = chatCount + 1;
-	$("#chatCount").text("Total chats are " + chatCount);
-	var total = callCount + chatCount;
-	$("#totalCount").text("Total count " + total);
+	$(".chatText").text("Chats: " + chatCount);
+	var total = callCount + chatCount + installCount;
+	$(".totalCount").text("Total count " + total);
+});
+
+
+$(".install_Btn").on("click", function(){
+	installCount = installCount + 1;
+	$(".installText").text("Installs: " + installCount);
+	var total = callCount + chatCount + installCount;
+	$(".totalCount").text("Total count " + total);
 });
 
 
 
-// $(".total").on("click", function(){
-// 	var total = callCount + chatCount;
-// 	$("#totalCount").text("Your total so far is " + total);
+// Future patch
+// $(".rphValue").on("click", function(){
+// 	var hours = prompt("How many hours have you worked");
+
+//  var displayRph= rph(callCount, chatCount, installCount, hours);
 // });
+
+
+
+
+
+
+
+
+
+
+//Storage Area.
+
 
 
 
@@ -43,8 +86,9 @@ $(".clearBtn").on("click", function(){
 	callCount = 0;
 	chatCount = 0;
 	total = 0;
-	$("#chatCount").text("Chats Cleared");
-	$("#callCount").text("Calls Cleared");
+	$("#chatCount").text("Data Cleared");
+	$("#callCount").text("Data Cleared");
+	$("#totalCount").text("Data Cleared");
 	localStorage.clear();
 });
 
@@ -56,6 +100,23 @@ function checkTotals() {
 
 
 checkTotals();
+
+$('.totalArea').hide();
+$('.totalArea').hide();
+
+
+
+$(".infoImg").on("click", function(){
+	$('.container').toggle();
+	$('.totalArea').toggle();
+	//$('.totalArea').toggle();
+	//$('.totalArea').toggle();
+});
+
+
+
+
+
 
 
 
