@@ -13,6 +13,14 @@ var installTotal = 0;
 
 var total = 0;
 
+var totalActCash = 8.36;
+var totalChatCast = 8.36;
+var totalInstallCash = 13.83;
+
+var totalEarned = 0.00;
+
+
+
 
 // Future patch RPH purposes.
 //var call_Money_Total = 0;
@@ -20,10 +28,10 @@ var total = 0;
 
 
 
-function rph(callCount, chatCount, installCount, hours) {
-var num = ((callCount + chatCount)* (8.36) / hours) + ((installCount * 13.83) / hours);
-	$('.totalCount').text(rph());
-}
+// function rph(callCount, chatCount, installCount, hours) {
+// var num = ((callCount + chatCount)* (8.36) / hours) + ((installCount * 13.83) / hours);
+// 	$('.totalCount').text(rph());
+// }
 
 
 
@@ -49,6 +57,7 @@ $(".install_Btn").on("click", function(){
 	$(".installText").text("Installs: " + installCount);
 	var total = callCount + chatCount + installCount;
 	$(".totalCount").text("Total count " + total);
+
 });
 
 
@@ -96,6 +105,7 @@ $(".storeBtn").on("click", function(){
 	$(".restoreCalls").text("Data Stored");
 	$(".restoreChats").text("Data Stored");
 	$(".restoreInstalls").text("Data Stored");
+
 });
 
 // data stores : ok
@@ -120,9 +130,9 @@ $(".clearBtn").on("click", function(){
 
 
 function checkTotals() {
-		$(".restoreCalls").text("No saved Data").append(localStorage.getItem('calls'));
-		$(".restoreChats").text("No saved Data").append(localStorage.getItem('chats'));
-		$(".restoreInstalls").text("No saved Data").append(localStorage.getItem('installs'));
+		$(".restoreCalls").text("Calls ").append(localStorage.getItem('calls'));
+		$(".restoreChats").text("Chats ").append(localStorage.getItem('chats'));
+		$(".restoreInstalls").text("Installs ").append(localStorage.getItem('installs'));
 	}
 
 
@@ -147,6 +157,17 @@ $(".infoImg").on("click", function(){
 	//$('.totalArea').toggle();
 	//$('.totalArea').toggle();
 });
+
+$('.earned').on("click", function(){
+
+	totalEarned = ((callCount + chatCount) *  8.36) + ( installCount * 13.83);
+	$('.madeToday').text(totalEarned);
+
+});
+
+
+
+
 
 
 
