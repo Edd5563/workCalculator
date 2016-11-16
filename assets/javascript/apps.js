@@ -138,9 +138,11 @@ checkTotals();
 
 $('.totalArea').hide();
 $('.totalArea').hide();
+$(".footer").hide();
 
 $(".infoImg").on("click", function(){
 	$('.container').toggle();
+	$(".footer").toggle();
 	$('.totalArea').toggle();
 	//$('.totalArea').toggle();
 	//$('.totalArea').toggle();
