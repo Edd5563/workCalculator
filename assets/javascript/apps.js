@@ -71,35 +71,47 @@ $(".install_Btn").on("click", function(){
 
 //Storage Area.
 
-
-
-
 $(".storeBtn").on("click", function(){
 	localStorage.clear();
 	localStorage.setItem('calls',callCount);
 	localStorage.setItem('chats', chatCount);
+	localStorage.setItem('installs', installCount);
 	return false;
 });
 
+// data stores : ok
 
+
+
+
+//Nuke All data
 $(".clearBtn").on("click", function(){
 	callCount = 0;
 	chatCount = 0;
 	total = 0;
-	$("#chatCount").text("Data Cleared");
-	$("#callCount").text("Data Cleared");
+	$(".chatCount").text("Data Cleared");
+	$(".callCount").text("Data Cleared");
 	$("#totalCount").text("Data Cleared");
 	localStorage.clear();
 });
 
+// Nukes all data: ok
+
+
 
 function checkTotals() {
-		$("#chatCount").text("Previous Count ").append(localStorage.getItem('chats'));
-		$("#callCount").text("Previous Count ").append(localStorage.getItem('calls'));
+		$(".restoreCalls").text("Previous Count ").append(localStorage.getItem('calls'));
+		$(".restoreChats").text("Previous Count ").append(localStorage.getItem('chats'));
+		$(".restoreInstalls").text("Previous Count ").append(localStorage.getItem('installs'));
 	}
 
 
+
+
+
 checkTotals();
+
+
 
 $('.totalArea').hide();
 $('.totalArea').hide();
