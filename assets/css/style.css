@@ -16,6 +16,11 @@ body {
 }
 
 
+.footer{
+	font-size: 10px;
+}
+
+
 .btn1 {
 	margin: 45px;
 	background-color: gray; 
